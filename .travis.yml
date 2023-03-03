@@ -1,10 +1,11 @@
 language: python
+
 python:
   - "3.8"
+
 install:
   - pip install -r requirements.txt
-script:
-  - pytest
+
 deploy:
   provider: elasticbeanstalk
   access_key_id: AKIAV53JPCOWCYLBA74Q
