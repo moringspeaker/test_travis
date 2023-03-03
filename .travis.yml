@@ -1,0 +1,17 @@
+language: python
+python:
+  - "3.8"
+install:
+  - pip install -r requirements.txt
+script:
+  - pytest
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: AKIAV53JPCOWCYLBA74Q
+  secret_access_key: 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
+  region: us-west-2
+  app: mysite-polls
+  env: https://us-west-2.console.aws.amazon.com/elasticbeanstalk/home?region=us-west-2#/applications
+  bucket_name: minibus
+  on:
+    branch: main
